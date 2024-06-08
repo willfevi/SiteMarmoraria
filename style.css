@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  background-color: #2C2827;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: rgba(44, 40, 39, 0.8);
+  z-index: 2;
+}
+
+.logo-name {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.company-name {
+  color: #7C7A79;
+  font-size: 16px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: #7C7A79;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-button:hover {
+  color: #bbb;
+}
+
+.contact-info {
+  display: flex;
+  gap: 15px;
+  color: #7C7A79;
+}
+
+.address, .phone {
+  font-size: 14px;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.address:hover, .phone:hover {
+  color: #bbb;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  filter: invert(52%) sepia(8%) saturate(1805%) hue-rotate(354deg) brightness(95%) contrast(85%);
+}
+
+.background-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('assets/fundo.avif') no-repeat center center;
+  background-size: cover;
+  z-index: 0;
+  filter: blur(5px);
+}
+
+.foreground-content {
+  position: relative;
+  top: 2%;
+  padding: 5%;
+  background-color: #2C2827;
+  height: 95%;
+  width: 92%;
+  margin: auto;
+  border-radius: 1px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.address a,
+.phone a {
+  color: #7C7A79;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.address a:hover,
+.phone a:hover {
+  color: #bbb;
+}
+
+.main-content {
+  color: #7C7A79;
+  text-align: left;
+  max-width: 50%;
+}
+
+.main-title {
+  font-size: 36px;
+  font-family: 'Weltron Urban', sans-serif;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.main-phrase {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.main-button {
+  background-color: #C99957; /* Define a cor de fundo para o botão */
+  color: #504330; /* Define a cor do texto */
+  border: none;
+  padding: 15px 30px; /* Ajusta o padding para tornar o botão mais largo */
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 10px; /* Aumenta o raio da borda para deixar o botão mais arredondado */
+}
+
+.main-button:hover {
+  background-color: #696767; /* Altera a cor de fundo ao passar o mouse */
+  color: #FFFFFF; /* Mantém a cor do texto ao passar o mouse */
+}
+
+
+
+
+.menu-icon {
+  display: none;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  filter: invert(52%) sepia(8%) saturate(1805%) hue-rotate(354deg) brightness(95%) contrast(85%);
+}
+
+@media (max-width: 768px) {
+  .nav-buttons,
+  .contact-info {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-icon {
+    display: none;
+  }
+}
+
+.carousel {
+  position: relative;
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.carousel-item {
+  position: relative;
+  width: 100%;
+  max-width: 350px; /* Aumenta a largura máxima para tornar as imagens maiores */
+  margin-right: 20px; /* Adiciona uma margem à direita para alinhar com os outros elementos */
+  top: 50px; /* Move a imagem 1 mais para baixo */
+  left: -60%; /* Move a imagem 1 mais para a esquerda */
+}
+.carousel-image {
+  width: 100%;
+  transition: transform 0.3s;
+}
+
+.carousel-item-behind {
+  position: absolute;
+  top: -5%; /* Mantém a imagem 2 no mesmo lugar */
+  left: 30px; /* Mantém a imagem 2 no mesmo lugar */
+  z-index: -1; /* Coloca a imagem 2 atrás */
+}
+
+
+
+
