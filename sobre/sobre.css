@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  background-color: #2C2827;
+}
+
+.container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: rgba(44, 40, 39, 0.8);
+  z-index: 2;
+}
+
+.logo-name {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 30px;
+  margin-right: 10px;
+}
+
+.company-name {
+  color: #7C7A79;
+  font-size: 16px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: #7C7A79;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-button:hover {
+  color: #bbb;
+}
+.contact-info {
+  display: flex;
+  gap: 15px;
+  color: #7C7A79;
+}
+
+.address, .phone {
+  font-size: 14px;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.address:hover, .phone:hover {
+  color: #bbb;
+}
+.address a,
+.phone a {
+  color: #7C7A79;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.address a:hover,
+.phone a:hover {
+  color: #bbb;
+}
+.icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  filter: invert(52%) sepia(8%) saturate(1805%) hue-rotate(354deg) brightness(95%) contrast(85%);
+}
+
+.background-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('../assets/fundo.avif') no-repeat center center;
+  background-size: cover;
+  z-index: 0;
+  filter: blur(5px);
+}
+
+.foreground-content {
+  position: relative;
+  top: 2%;
+  padding: 5%;
+  background-color: #2C2827;
+  height: 95%;
+  width: 92%;
+  margin: auto;
+  border-radius: 1px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-section {
+  color: #7C7A79;
+  text-align: left;
+  width: 45%;
+}
+
+.text-section {
+  width: 45%;
+}
+
+.carousel-section {
+  width: 45%;
+}
+
+.section-title {
+  font-size: 24px;
+  font-family: 'Weltron Urban', sans-serif;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.about-text {
+  font-size: 16px;
+  color: #7C7A79;
+  line-height: 1.6;
+}
+
+.carousel img {
+  width: 100%;
+  max-width: 600px; 
+  max-height: 400px; 
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .nav-buttons {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .foreground-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .text-section, .carousel-section {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-icon {
+    display: none;
+  }
+}
